@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from tqdm import tqdm
 
-holding_days = st.number_input("Enter the holding period", min_value=0, max_value=None, step=1, format="%d")
 
 def returns_stock(symbol, start_date, holding_days, entry="Close", exit="Close"):
     dt = datetime.strptime(start_date, '%Y-%m-%d') + timedelta(days=holding_days*2)
@@ -18,7 +17,7 @@ def returns_stock(symbol, start_date, holding_days, entry="Close", exit="Close")
 
 def main():
     st.title('Equity Curve and Drawdown Analysis')
-
+    holding_days = st.number_input("Enter the holding period", min_value=0, max_value=None, step=1, format="%d")
     uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
     if uploaded_file is not None:
