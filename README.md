@@ -19,18 +19,18 @@ Installation - To run this app locally:
 
 1. Clone this repository:
    ```
-   $ git clone <repository-url>
-   $ cd <repository-directory>
+   git clone <repository-url>
+   cd <repository-directory>
    ```
 
 2. Install the requirements
 
    ```
-   $ pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
    
 3. Run the Streamlit app:
    
    ```
-   $ streamlit run app.py
+   streamlit run app.py
    ```
