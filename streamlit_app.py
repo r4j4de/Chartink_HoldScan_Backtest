@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from tqdm import tqdm
 
-holding_days = 10
+holding_days = st.number_input("Enter the holding period", min_value=0, max_value=None, step=1, format="%d")
 
 def returns_stock(symbol, start_date, holding_days, entry="Close", exit="Close"):
     dt = datetime.strptime(start_date, '%Y-%m-%d') + timedelta(days=holding_days*2)
